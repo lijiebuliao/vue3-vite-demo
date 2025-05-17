@@ -1,11 +1,9 @@
 name: Deploy to GitHub Pages
 
 on:
-  # 触发条件：推送到 main 分支时
   push:
     branches:
       - main
-  # 允许手动触发部署
   workflow_dispatch:
 
 jobs:
@@ -13,28 +11,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 检出代码
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      # 设置 Node.js 环境
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: ''
           cache: 'npm'
 
-      # 安装依赖
-      - name: Install Dependencies
-        run: npm ci
+      # 尝试直接使用 npm install 而不是 npm ci，虽然通常推荐使用 npm ci 以确保一致性
+      # 但如果 npm ci 失败，可以尝试 npm install 作为临时解决方案
+      - name: Install project dependencies
+        run: npm install
 
-      # 构建
-      - name: Build
+      - name: Build project
         run: npm run build
 
-      # 部署到 GitHub Pages
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # 要部署的文件夹
-          branch: gh-pages # 部署到的分支
+          folder: dist
+          branch: gh-pages
