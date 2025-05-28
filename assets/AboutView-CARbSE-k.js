@@ -1,0 +1,1 @@
+import{_ as o,c as a,a as t,o as s}from"./index-DK5xLvhy.js";const _={class:"about"},c={__name:"AboutView",setup(n){return(r,e)=>(s(),a("div",_,e[0]||(e[0]=[t("h1",null,"关于页面",-1),t("p",null,"这是一个关于页面的示例",-1)])))}},p=o(c,[["__scopeId","data-v-4ad0ae93"]]);export{p as default};

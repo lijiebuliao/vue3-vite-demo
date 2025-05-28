@@ -1,0 +1,1 @@
+import{_ as t,c as s,a as o,o as a}from"./index-DK5xLvhy.js";const c={class:"home"},_={__name:"HomeView",setup(n){return(r,e)=>(a(),s("div",c,e[0]||(e[0]=[o("h1",null,"欢迎来到 Vue 3 + Vite 示例项目",-1),o("p",null,"这是一个使用 Vue 3 和 Vite 构建的现代化前端项目",-1)])))}},p=t(_,[["__scopeId","data-v-51ca61c1"]]);export{p as default};
