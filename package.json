@@ -16,7 +16,8 @@
   "devDependencies": {
     "unplugin-auto-import": "^19.3.0",
     "@vitejs/plugin-vue": "^5.2.4",
-    "vite": "^5.0.10"
+    "vite": "^5.0.10",
+    "@vitejs/plugin-legacy": "^5.2.0"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.9.5"
