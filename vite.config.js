@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import createPlugins from './plugins'
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: createPlugins(),
   // GitHub Pages 部署基础路径配置
   base: '/',
   server: {
@@ -14,7 +14,6 @@ export default defineConfig({
     port: 3000,
     open: true, // 自动打开浏览器
   },
-  plugins: createPlugins(),
   build: {
     // 生产环境打包配置
     outDir: 'dist',
